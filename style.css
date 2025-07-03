@@ -101,19 +101,28 @@ main {
     justify-content: center;
     align-items: center;
 }
-.hero #png {
+.hero .png {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-image: url(images/Railgun\ Spider\ Web\ Trans.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.one {
+    background-image: url(images/Railgun\ Spider\ Web\ Trans.png);
+}
+.two {
+    background-image: url(images/Railgun\ Spider\ Web\ Leg.png);
+    z-index: 11;
 }
 h1 {
     font-weight: 700;
     font-size: 6em;
     padding-bottom: 30px;
+}
+.hero .Htext {
+    z-index: 10;
 }
 .hero li {
     font-weight: 600;
