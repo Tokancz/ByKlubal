@@ -25,7 +25,7 @@
         </div>
         <nav>
             <li><a href="">HOME</a></li>
-            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
             <li><a href="">ABOUT ME</a></li>
             <li><a href="#contacts">CONTACT</a></li>
         </nav>
@@ -33,7 +33,6 @@
     </header>
     <main>
         <section class="hero">
-            <div class="png one"></div>
             <div class="Htext">
                 <h1>KLUBAL</h1>
                 <li>Digital Sculptor</li>
@@ -41,7 +40,6 @@
                 <li>Visual Storyteller</li>
             </div>
             <i class="fa-solid fa-arrow-down"></i>
-            <div class="png two"></div>
         </section>
         <hr>
         <section class="aboutMe">
@@ -49,41 +47,30 @@
             <p>Hi, I'm Matyáš Klubal — a passionate 3D artist focused on creating expressive digital worlds. Whether it's realistic environments, stylized characters, or experimental visuals, I aim to craft art that tells a story.</p>
             <p>I mainly work in <b>Blender</b> and I love pushing my creativity through both animation and static renders.</p>
         </section>
-        <section class="portfolio">
-            <h2>PORTFOLIO</h2>
-            <p>Explore a selection of my 3D models, concept renders, and experimental pieces. Click to view in full.</p>
+        <section class="portfolio" id="portfolio">
+            <section class="portfolioText">
+                <h2>PORTFOLIO</h2>
+                <p>Explore a selection of my 3D models, concept renders, and experimental pieces. Click to view in full.</p>
+            </section>
+            <div class="slider-container">
+                <div class="slider" id="slider">
+                    <div class="slide"><img src="images/BoboGwrll5.webp" alt="Image 1"></div>
+                    <div class="slide"><img src="images/Crystal 7.webp" alt="Image 2"></div>
+                    <div class="slide"><img src="images/CyberRender3.webp" alt="Image 3"></div>
+                    <div class="slide"><img src="images/Deluxo8.webp" alt="Image 4"></div>
+                    <div class="slide"><img src="images/Honda Hologram7.webp" alt="Image 5"></div>
+                    <div class="slide"><img src="images//Ornithopter5.webp" alt="Image 6"></div>
+                    <div class="slide"><img src="images/Railgun Spider Web.png" alt="Image 7"></div>
+                    <div class="slide"><img src="images/Steampunk9.webp" alt="Image 8"></div>
+                </div>
+                <button class="nav-btn prev-btn" onclick="prevSlide()"><i class="fa-solid fa-angle-left"></i></button>
+                <button class="nav-btn next-btn" onclick="nextSlide()"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+            <div class="dots" id="dots"></div>
         </section>
-        <hr>
-        <section id="gallery">
-            <div class="img1">
-                <p>Robot Girl</p>
-                <img src="/images/BoboGwrll5.webp" alt="" class="img1">
-            </div>
-            <div class="img2">
-                <p>Ornithopter from DUNE</p>
-                <img src="/images/Ornithopter5.webp" alt="" class="img2">
-            </div>
-            <div class="img3">
-                <p>Ornithopter from DUNE</p>
-                <img src="/images/Ornithopter6.webp" alt="" class="img3">
-            </div>
-            <div class="img4">
-                <p>Delorean DMC-12</p>
-                <img src="/images/Deluxo8.webp" alt="" class="img4">
-            </div>
-            <div class="img5">
-                <p>Steampunk flying machine</p>
-                <img src="/images/Steampunk9.webp" alt="" class="img5">
-            </div>
-            <div class="img6">
-                <p>Spidertron with Railgun</p>
-                <img src="images/Railgun Spider Web.png" alt="" class="img6">
-            </div>
-            <div class="img7">
-                <p>Crystal generator preview</p>
-                <img src="/images/Crystal 7.webp" alt="" class="img7">
-            </div>
-        </section>
+        <div class="modal" id="modal" onclick="closeModal(event)">
+            <img id="modal-img" src="" alt="Full Size">
+        </div>
         <hr>
         <section class="skills">
             <h2>TOOLS & SKILLS</h2>
@@ -97,7 +84,7 @@
     </main>
     <footer>
         <div id="footerText">
-            <p id="contact">CONTACT</p>
+            <h2>CONTACT</h2>
             <p>Got a project in mind or just want to chat about 3D art? Let’s connect!</p>
         </div>
         <div id="contacts">
@@ -106,6 +93,7 @@
             <a href="mailto:matyasklubal@gmail.com"><i class="fa-solid fa-envelope"></i> matyasklubal@gmail.com</a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
 
