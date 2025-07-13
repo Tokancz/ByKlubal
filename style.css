@@ -14,7 +14,7 @@ body {
     font-family: "Source Code Pro", monospace;
     font-size: 1.5em;
     max-width: 2000px;
-    background: radial-gradient(circle, var(--primary) 0%, rgb(22, 22, 22) 100%);
+    background: radial-gradient(circle, var(--primary) 50%, rgb(37, 37, 37) 100%);
     background-repeat: repeat;
     color: var(--gray);
 }
@@ -152,25 +152,38 @@ b {font-weight: bold; color: var(--secondary);}
     padding-right: 60px;
 }
 .slider-container {
-    position: relative;
-    max-width: 85%;
-    border-radius: 10px;
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
 .slider {
-    display: flex;
-    gap: 15px;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 20px 0;
 }
+
+.slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
 .slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  flex: 0 0 auto;
+  scroll-snap-align: center; /* ✅ snap slide to center */
+  cursor: pointer;
 }
+
 .slide img {
-    height: 900px;
-    display: block;
-    border-radius: 10px;
+  height: 500px;
+  width: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  max-width: 100%;
 }
 .nav-btn {
     position: absolute;
